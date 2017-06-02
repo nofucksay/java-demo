@@ -1,4 +1,4 @@
-package com.jyc.designpatterns._20_state;
+package com.jyc.designpatterns._20_state.vote;
 
 /**
  * TODO 处理不同投票状态的接口

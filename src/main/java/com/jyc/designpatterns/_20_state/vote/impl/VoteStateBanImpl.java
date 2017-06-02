@@ -1,7 +1,7 @@
-package com.jyc.designpatterns._20_state.impl;
+package com.jyc.designpatterns._20_state.vote.impl;
 
-import com.jyc.designpatterns._20_state.VoteManager;
-import com.jyc.designpatterns._20_state.VoteState;
+import com.jyc.designpatterns._20_state.vote.VoteManager;
+import com.jyc.designpatterns._20_state.vote.VoteState;
 
 /**
  * TODO 取消资格状态的处理器

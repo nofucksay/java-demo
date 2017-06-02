@@ -1,4 +1,4 @@
-package com.jyc.designpatterns._20_state;
+package com.jyc.designpatterns._20_state.vote;
 
 /**
  * TODO 测试状态模式的客户端,模拟场景：用户投票
