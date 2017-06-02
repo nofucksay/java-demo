@@ -1,4 +1,3 @@
-# java-demo
 ![demo](https://timgsa.baidu.com/timg?image&quality=100&size=b9999_10000&sec=1496257994028&di=ed139712c8999843a94f3c9647c7e3c3&imgtype=0&src=http%3A%2F%2Fimg.25pp.com%2Fuploadfile%2Fsoft%2Fimages%2F2014%2F0625%2F20140625092348710.jpg)
 > ## 目录
 > - [设计模式](#设计模式)
