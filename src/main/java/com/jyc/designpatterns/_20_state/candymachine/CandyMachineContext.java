@@ -4,12 +4,13 @@ import com.jyc.designpatterns._20_state.candymachine.impl.HasCoinState;
 import com.jyc.designpatterns._20_state.candymachine.impl.NoCoinState;
 import com.jyc.designpatterns._20_state.candymachine.impl.SoldOutState;
 import com.jyc.designpatterns._20_state.candymachine.impl.SoldState;
+import com.jyc.designpatterns._20_state.candymachine.impl.WinningSoldState;
 
 /**
  * <p><strong>状态模式的实现类：糖果机上下文</strong>
  * 
  * <p>一个糖果机，从投币到出糖的过程。
- * <p>糖果机共4种状态：无币，已投币，发糖，无糖。
+ * <p>糖果机共5种状态：无币，已投币，发售糖果，中奖发售糖果，无糖。
  * <p>糖果机共4种操作：投币，退币，转动摇杆，发糖。
  * @author 贾玉晨
  * @date 2017年6月2日-下午1:52:11	 
@@ -27,6 +28,9 @@ public class CandyMachineContext {
 	
 	// 无糖状态
 	private CandyMachineState soldOutState = new SoldOutState(); 
+	
+	// 中奖发糖状态
+	private CandyMachineState winningSoldState = new WinningSoldState();
 	
 	// 糖果机当前状态
 	private CandyMachineState currentState ; 
@@ -63,6 +67,9 @@ public class CandyMachineContext {
 	 */
 	public void turnJoystick(){
 		currentState.turnJoystick(this);
+		if (currentState instanceof WinningSoldState) {
+			System.out.println("中奖情况出现~");
+		}
 		currentState.dispenseCandy(this);
 	}
 	
@@ -119,6 +126,14 @@ public class CandyMachineContext {
 
 	public void setCandyNum(int candyNum) {
 		this.candyNum = candyNum;
+	}
+
+	public CandyMachineState getWinningSoldState() {
+		return winningSoldState;
+	}
+
+	public void setWinningSoldState(CandyMachineState winningSoldState) {
+		this.winningSoldState = winningSoldState;
 	}
 	
 	

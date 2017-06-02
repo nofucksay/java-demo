@@ -3,6 +3,11 @@ package com.jyc.designpatterns._20_state.candymachine.impl;
 import com.jyc.designpatterns._20_state.candymachine.CandyMachineContext;
 import com.jyc.designpatterns._20_state.candymachine.CandyMachineState;
 
+/**
+ * <p> 无币状态类
+ * @author jyc
+ *
+ */
 public class NoCoinState implements CandyMachineState {
 
 	@Override

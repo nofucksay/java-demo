@@ -3,6 +3,11 @@ package com.jyc.designpatterns._20_state.candymachine.impl;
 import com.jyc.designpatterns._20_state.candymachine.CandyMachineContext;
 import com.jyc.designpatterns._20_state.candymachine.CandyMachineState;
 
+/**
+ * <p> 发售糖果状态类
+ * @author jyc
+ *
+ */
 public class SoldState implements CandyMachineState {
 
 	@Override
@@ -27,6 +32,7 @@ public class SoldState implements CandyMachineState {
 	public void dispenseCandy(CandyMachineContext context) {
 		int candyNum = context.getCandyNum();
 		candyNum -= 1;
+		context.setCandyNum(candyNum);
 		if (candyNum > 0) {
 			context.setCurrentState(context.getNoCoinState());
 		}else{

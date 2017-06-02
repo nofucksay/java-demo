@@ -2,6 +2,8 @@ package com.jyc.designpatterns._20_state.candymachine;
 
 import org.junit.Test;
 
+import com.jyc.designpatterns._20_state.candymachine.impl.WinningSoldState;
+
 public class CandyMachineClient {
 
 	/**
@@ -55,5 +57,19 @@ public class CandyMachineClient {
 	public void candyTest05(){
 		CandyMachineContext cm = new CandyMachineContext();
 		cm.turnJoystick();
+	}
+	
+	
+	/**
+	 * 测试中奖状态
+	 */
+	@Test
+	public void candyTest06(){
+		CandyMachineContext cm = new CandyMachineContext(100);
+		for (int i = 0; i < 101; i++) {
+			System.out.printf("第%d轮\n",(i+1));
+			cm.inputCoin();
+			cm.turnJoystick();
+		}
 	}
 }

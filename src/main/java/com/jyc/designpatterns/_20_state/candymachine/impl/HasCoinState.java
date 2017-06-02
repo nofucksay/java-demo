@@ -3,6 +3,11 @@ package com.jyc.designpatterns._20_state.candymachine.impl;
 import com.jyc.designpatterns._20_state.candymachine.CandyMachineContext;
 import com.jyc.designpatterns._20_state.candymachine.CandyMachineState;
 
+/**
+ * <p> 已投币状态类
+ * @author jyc
+ *
+ */
 public class HasCoinState implements CandyMachineState {
 
 	@Override
@@ -13,8 +18,14 @@ public class HasCoinState implements CandyMachineState {
 
 	@Override
 	public void turnJoystick(CandyMachineContext context) {
-		System.out.println("你转动了力量之源~");
-		context.setCurrentState(context.getSoldState());
+		System.out.println("你转动了摇杆~");
+		int candyNum = context.getCandyNum();
+		int winNumber = (int) (Math.random() * 10);
+		if (candyNum >= 2 && winNumber == 0) {
+			context.setCurrentState(context.getWinningSoldState());
+		}else{
+			context.setCurrentState(context.getSoldState());
+		}
 	}
 
 	@Override
