@@ -11,7 +11,7 @@ import com.jyc.designpatterns._20_state.candymachine.impl.WinningSoldState;
  * 
  * <p>一个糖果机，从投币到出糖的过程。
  * <p>糖果机共5种状态：无币，已投币，发售糖果，中奖发售糖果，无糖。
- * <p>糖果机共4种操作：投币，退币，转动摇杆，发糖。
+ * <p>糖果机共3种操作：投币，退币，转动摇杆。
  * @author 贾玉晨
  * @date 2017年6月2日-下午1:52:11	 
  */

@@ -2,8 +2,6 @@ package com.jyc.designpatterns._20_state.candymachine;
 
 import org.junit.Test;
 
-import com.jyc.designpatterns._20_state.candymachine.impl.WinningSoldState;
-
 public class CandyMachineClient {
 
 	/**
