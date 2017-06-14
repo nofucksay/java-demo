@@ -41,3 +41,4 @@
 		4. 需要加入本来不会飞但是点火后可以飞的火箭鸭。
 			- 现有的继承结构无法在运行时改变鸭子的行为。
 		5. 随着需求的不断变化，继承Duck类使得改变会牵一发动全身，造成其他鸭子不想要的改变。
+		6. 代码地址：*[Duck](https://github.com/nofucksay/java-demo/tree/master/src/main/java/com/jyc/designpatterns/_01_strategy/duck)*
