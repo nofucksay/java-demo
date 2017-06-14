@@ -5,6 +5,7 @@
 	- [设计原则](#设计原则)
 	- [状态模式](#状态模式)
 	- [策略模式](#策略模式)
+	- [观察者模式](#观察者模式)
 ##  
 
 ## 设计模式
@@ -15,22 +16,24 @@
 		针对接口编程，类不需要知道行为的实现细节。
 	- #### 设计原则三
 		多用组合，少用继承。
+	- #### 设计原则四
+	  为对象间的松耦合设计而努力。
 
 - ### 状态模式
 	- #### 模式定义
-		- 状态模式，又称`状态对象模式`，状态模式是对象的行为模式。
+		- 状态模式又称状态对象模式，状态模式是对象的行为模式。
 		- 状态模式允许一个对象在其内部状态改变的时候改变其行为。这个对象看上去就像是改变了它的类一样。
-	- #### 使用示例
+	- #### 模式示例
 		- #### 糖果机
 		1. 实现一个糖果机从投币到出糖的过程。
 		2. 糖果机共5种状态：无币，已投币，发售糖果，中奖发售糖果（10%几率），无糖。
 		3. 糖果机共3种操作：投币，退币，转动摇杆。
-		4. 代码地址：*[CandyMachine](https://github.com/nofucksay/java-demo/tree/master/src/main/java/com/jyc/designpatterns/_20_state/candymachine)*
+		4. Demo地址：*[CandyMachine](https://github.com/nofucksay/java-demo/tree/master/src/main/java/com/jyc/designpatterns/_01_state/candymachine)*
 		
 - ### 策略模式
 	- #### 模式定义
 		- 策略模式定义了算法族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。
-	- #### 使用示例
+	- #### 模式示例
 		- #### 鸭子呱呱
 		1. 只需要会呱呱叫并且外表不同的鸭子。
 			- Duck类实现`quack()`和定义`display()`，不同的鸭子继承Duck类重写`display()`。
@@ -41,4 +44,14 @@
 		4. 需要加入本来不会飞但是点火后可以飞的火箭鸭。
 			- 现有的继承结构无法在运行时改变鸭子的行为。
 		5. 随着需求的不断变化，继承Duck类使得改变会牵一发动全身，造成其他鸭子不想要的改变。
-		6. 代码地址：*[Duck](https://github.com/nofucksay/java-demo/tree/master/src/main/java/com/jyc/designpatterns/_01_strategy/duck)*
+		6. Demo地址：*[Duck](https://github.com/nofucksay/java-demo/tree/master/src/main/java/com/jyc/designpatterns/_02_strategy/duck)*
+
+- ### 观察者模式
+	- #### 模式定义
+		- 观察者模式定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖者都能收到通知并自动更新。
+	- #### 模式示例
+		- #### 气象站
+		1. 气象站的**天气数据服务台**从观测设备中更新观测数据并通知所有**数据显示板**更新数据。
+		2. 天气数据服务台作为**被观察者**，数据显示板作为**观察者**注册到天气数据服务台中。
+		3. v1版本是自定义实现的观察者模式，v2版本是jdk提供的观察者模式（jdk自带的又分为push和pull方式）。
+		4. Demo地址：*[WeatherData](https://github.com/nofucksay/java-demo/tree/master/src/main/java/com/jyc/designpatterns/_03_observer/weatherstation)*
