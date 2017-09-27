@@ -1,4 +1,4 @@
-# Java-Designpatterns
+# java-designpatterns
 
 ## 目录
 - [设计模式](#设计模式)
