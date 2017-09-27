@@ -1,4 +1,4 @@
-# Java-Demos
+# Java-Designpatterns
 
 ## 目录
 - [设计模式](#设计模式)
