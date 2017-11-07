@@ -1,4 +1,4 @@
-package com.jyc.designpatterns._02_strategy.duck;
+package com.jyc.designpatterns._02_strategy.duck.vo;
 
 import com.jyc.designpatterns._02_strategy.duck.fly.FlyBehavior;
 import com.jyc.designpatterns._02_strategy.duck.quack.QuackBehavior;

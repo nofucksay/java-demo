@@ -1,5 +1,6 @@
-package com.jyc.designpatterns._02_strategy.duck;
+package com.jyc.designpatterns._02_strategy.duck.client;
 
+import com.jyc.designpatterns._02_strategy.duck.vo.Duck;
 import org.junit.Test;
 
 import com.jyc.designpatterns._02_strategy.duck.fly.impl.RocketFlyBehavior;

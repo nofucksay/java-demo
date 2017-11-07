@@ -1,6 +1,6 @@
 package com.jyc.designpatterns._02_strategy.duck.impl;
 
-import com.jyc.designpatterns._02_strategy.duck.Duck;
+import com.jyc.designpatterns._02_strategy.duck.vo.Duck;
 import com.jyc.designpatterns._02_strategy.duck.fly.impl.CanNotFlyBehavior;
 import com.jyc.designpatterns._02_strategy.duck.quack.impl.CanNotQuackBehavior;
 

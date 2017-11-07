@@ -1,4 +1,4 @@
-package com.jyc.designpatterns._04_decorator.halocoffee;
+package com.jyc.designpatterns._04_decorator.halocoffee.client;
 
 import com.jyc.designpatterns._04_decorator.halocoffee.coffee.Coffee;
 import com.jyc.designpatterns._04_decorator.halocoffee.coffee.impl.Cappuccino;
