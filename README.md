@@ -6,7 +6,8 @@
 	- [状态模式](#状态模式)
 	- [策略模式](#策略模式)
 	- [观察者模式](#观察者模式)
-##  
+	- [装饰器模式](#装饰器模式)
+##  
 
 ## 设计模式
 - ### 设计原则
@@ -17,7 +18,9 @@
 	- #### 设计原则三
 		多用组合，少用继承。
 	- #### 设计原则四
-		为对象间的松耦合设计而努力。
+		对象间的设计尽量松耦合。
+	- #### 设计原则五
+		类应该对扩展开放，对修改关闭（开闭原则）。
 
 - ### 状态模式
 	- #### 模式定义
@@ -55,3 +58,12 @@
 		2. 天气数据服务台作为**被观察者**，数据显示板作为**观察者**注册到天气数据服务台中。
 		3. v1版本是自定义实现的观察者模式，v2版本是jdk提供的观察者模式（jdk自带的又分为push和pull方式）。
 		4. Demo地址：*[WeatherData](https://github.com/nofucksay/java-demo/tree/master/src/main/java/com/jyc/designpatterns/_03_observer/weatherstation)*
+		
+- ### 装饰器模式
+	- #### 模式定义
+		- 动态的将责任附加到对象上。想要扩展功能，装饰器提供有别于继承的另一种选择。
+	- #### 模式示例
+		- #### HALO咖啡
+		1. 顾客购买咖啡时添加的牛奶，可可，糖作为**装饰器**，咖啡作为**组件**被装饰。
+		2. 装饰器与组件有相同基类。
+		3. Demo地址：*[HaloCoffee](https://github.com/nofucksay/java-designpatterns/tree/master/src/main/java/com/jyc/designpatterns/_04_decorator/halocoffee)*
